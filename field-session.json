@@ -1,0 +1,82 @@
+{
+  "page_budget": 3,
+  "page_size_source": "SC_PAGE_SIZE",
+  "first_offset": "page-6",
+  "records": {
+    "r1": "observatory-one",
+    "r2": "unfinished-second",
+    "r3": "writer-recovered"
+  },
+  "actions": [
+    [
+      0,
+      "attach",
+      "writer-1"
+    ],
+    [
+      1,
+      "prefix",
+      "r1",
+      10
+    ],
+    [
+      2,
+      "commit",
+      "r1"
+    ],
+    [
+      3,
+      "open",
+      "reader-a",
+      "r1"
+    ],
+    [
+      4,
+      "pass",
+      "reader-a",
+      "reader-b",
+      "r1"
+    ],
+    [
+      5,
+      "prefix",
+      "r2",
+      8
+    ],
+    [
+      6,
+      "exit",
+      "writer-1"
+    ],
+    [
+      7,
+      "attach",
+      "writer-2"
+    ],
+    [
+      8,
+      "commit",
+      "r3"
+    ],
+    [
+      9,
+      "close",
+      "reader-a"
+    ],
+    [
+      10,
+      "query",
+      "budget"
+    ],
+    [
+      11,
+      "close",
+      "reader-b"
+    ],
+    [
+      12,
+      "query",
+      "frontier"
+    ]
+  ]
+}
